@@ -1,0 +1,139 @@
+body {
+    font-family: "Hiragino Kaku Gothic ProN", "メイリオ", sans-serif;
+    background: linear-gradient(45deg, #ffcc80, #ffab40);
+    animation: gradient 10s ease infinite;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes gradient {
+    0% { background: linear-gradient(45deg, #ffcc80, #ffab40); }
+    50% { background: linear-gradient(45deg, #ffab40, #ff9800); }
+    100% { background: linear-gradient(45deg, #ffcc80, #ffab40); }
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+    padding: 30px;
+    background-color: rgba(255, 224, 178, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+
+h1 {
+    color: #d32f2f;
+    font-size: 2em;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin: 20px 0;
+}
+
+label {
+    display: block;
+    margin-bottom: 15px;
+    color: #333;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+select {
+    width: 80%;
+    padding: 15px;
+    margin-bottom: 25px;
+    border: 2px solid #d32f2f;
+    border-radius: 10px;
+    font-size: 1.1em;
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+select:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.selected {
+    animation: shake 0.3s ease-in-out;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+.roulette-button {
+    display: inline-block;
+    padding: 15px 40px;
+    margin-top: 20px;
+    background-color: #d32f2f;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-decoration: none;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(211, 47, 47, 0.3);
+}
+
+.roulette-button:hover {
+    background-color: #b71c1c;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(183, 28, 28, 0.4);
+}
+
+.roulette-button:active {
+    transform: translateY(1px);
+}
+
+.roulette-image {
+    display: block;
+    margin: 20px auto;
+    width: 150px;
+    height: 150px;
+    animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    select {
+        width: 90%;
+        padding: 12px;
+    }
+
+    .roulette-button {
+        padding: 12px 30px;
+        font-size: 1.1em;
+    }
+
+    .roulette-image {
+        width: 120px;
+        height: 120px;
+    }
+}
