@@ -1,5 +1,7 @@
 <?php $page_title = $groupdata->name; ?>
 
+<link rel="stylesheet" href="css/grouppage.css">
+
 @include('headers')
 <br>
 <br>
@@ -37,7 +39,7 @@
                         @endif
                         <div class="container">
                             <a href="{{ route('restaurant.restaurantpage', ['cafe_id' => $cafe->id, 'user_id' => $user_id]) }}">
-                                <button class="gorest">{{ $cafe->name }}に行く</button>
+                                <button class="button-restaurant">{{ $cafe->name }}に行く</button>
                             </a>
                         </div>
                         <form action="{{route('restaurant.roulettepage')}}" method="get">

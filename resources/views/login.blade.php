@@ -12,7 +12,7 @@
             <button type="submit">ログイン</button>
         </form>
     </div>   
-    <a href="{{ route('user.registerpage') }}">登録はこちら</a> <!-- ルート名を修正 -->
+    <a href="{{ route('user.registerpage') }}">登録はこちら</a> 
 
 </body>
 @include('footer');

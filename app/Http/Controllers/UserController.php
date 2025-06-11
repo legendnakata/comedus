@@ -26,6 +26,10 @@ class UserController extends Controller
         }
     }
 
+    public function registerpage(){
+        return view('/registerpage');
+    }
+
     public function register(Request $request) {
         try {
             $validatedData = $request->validate([
